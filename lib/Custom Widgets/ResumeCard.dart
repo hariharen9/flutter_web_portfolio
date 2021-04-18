@@ -85,8 +85,7 @@ class _ResumeCardEduState extends State<ResumeCardEdu> {
           ),
           CustomCard(
             head: "SSLC",
-            sub2:
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae",
+            sub2: "95% - 10th STD State board - Tamilnadu ",
             sub: "RJ Matriculation Higher Secondary School - Coimbatore / 2016",
           ),
           Container(
@@ -98,7 +97,7 @@ class _ResumeCardEduState extends State<ResumeCardEdu> {
           ),
           CustomCard(
             head: "Diploma - ECE",
-            sub2: "Diploma in Electronics and Eommunication Engineering",
+            sub2: "94% - Diploma in Electronics and Eommunication Engineering",
             sub: "PSG Institute of Technology / 2017 - 2019",
           ),
           Container(
@@ -110,7 +109,7 @@ class _ResumeCardEduState extends State<ResumeCardEdu> {
           ),
           CustomCard(
             head: "Batchelor's Degree - CSE",
-            sub2: "BE in the Dept of. Computer Science Engineering",
+            sub2: "8.5 - BE in the Dept of. Computer Science Engineering",
             sub: "Coimbatore Institute of Techology / 2019 - 2022",
           ),
         ],
