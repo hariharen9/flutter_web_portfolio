@@ -5,11 +5,6 @@ void main() {
   runApp(MaterialApp(home: MyApp()));
 }
 
-//lets start from the contact section
-//lets build Blog page now
-//lets build the resume Section
-//lets build about section
-//lets do the landing page .and the animation to..
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();

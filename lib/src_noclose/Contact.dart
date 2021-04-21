@@ -4,12 +4,12 @@ import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ContactPage extends StatefulWidget {
+class ContactPageNoClose extends StatefulWidget {
   @override
-  _ContactPageState createState() => _ContactPageState();
+  _ContactPageNoCloseState createState() => _ContactPageNoCloseState();
 }
 
-class _ContactPageState extends State<ContactPage> {
+class _ContactPageNoCloseState extends State<ContactPageNoClose> {
   bool condition = false;
   double height = 0;
   ScrollController controller = ScrollController();
@@ -44,29 +44,29 @@ class _ContactPageState extends State<ContactPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Padding(
-                          padding:
-                              const EdgeInsets.only(top: 25.0, right: 25.0),
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                height = MediaQuery.of(context).size.height;
-                              });
-                              Future.delayed(Duration(milliseconds: 1000), () {
-                                Navigator.pop(context);
-                              });
-                            },
-                            child: Container(
-                                child: Icon(
-                              Icons.clear_rounded,
-                              color: Colors.white,
-                              size: 35.0,
-                            )),
-                          ),
-                        ),
-                      ),
+                      // Align(
+                      //   alignment: Alignment.centerRight,
+                      //   child: Padding(
+                      //     padding:
+                      //         const EdgeInsets.only(top: 25.0, right: 25.0),
+                      //     child: GestureDetector(
+                      //       onTap: () {
+                      //         setState(() {
+                      //           height = MediaQuery.of(context).size.height;
+                      //         });
+                      //         Future.delayed(Duration(milliseconds: 1000), () {
+                      //           Navigator.pop(context);
+                      //         });
+                      //       },
+                      //       child: Container(
+                      //           child: Icon(
+                      //         Icons.clear_rounded,
+                      //         color: Colors.white,
+                      //         size: 35.0,
+                      //       )),
+                      //     ),
+                      //   ),
+                      // ),
                       SizedBox(
                         height: 43.0,
                       ),
@@ -110,7 +110,27 @@ class _ContactPageState extends State<ContactPage> {
                                 ),
                                 ContactInfo(),
                               ],
-                            )
+                            ),
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Copyright © 2021',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              ),
+                              Text(
+                                'HARIHAREN ',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),

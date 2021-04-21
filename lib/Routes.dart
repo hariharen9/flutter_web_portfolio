@@ -5,6 +5,7 @@ import 'package:HariHaren/src/Blog.dart';
 import 'package:HariHaren/src/Contact.dart';
 import 'package:HariHaren/src/Landing.dart';
 import 'package:HariHaren/src/Resume.dart';
+import 'package:HariHaren/src/Projects.dart';
 
 class Flurorouter {
   static final FluroRouter router = FluroRouter();
@@ -17,13 +18,17 @@ class Flurorouter {
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           About());
 
+  static Handler _projectsHandler = Handler(
+      handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+          Projects());
+
   static Handler _blogHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           Blog());
 
   static Handler _contactHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
-          Contact());
+          ContactPage());
 
   static Handler _resumeHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
@@ -37,6 +42,11 @@ class Flurorouter {
     router.define(
       '/About',
       handler: _aboutHandler,
+      // transitionType: TransitionType.fadeIn,
+    );
+    router.define(
+      '/Projects',
+      handler: _projectsHandler,
       // transitionType: TransitionType.fadeIn,
     );
     router.define(
